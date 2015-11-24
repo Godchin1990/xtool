@@ -85,7 +85,6 @@ public class SeeExistwifiActivity extends Activity {
        try{
     	if(f.exists())
         {
-    		System.out.println("����");
         	BufferedReader br=new BufferedReader(new FileReader(f));
         	StringBuffer result=new StringBuffer();
         	String s="";
@@ -125,8 +124,8 @@ public class SeeExistwifiActivity extends Activity {
 	 		{
   			bar.setVisibility(View.GONE);
 	 			nomessage.setVisibility(View.VISIBLE);
-	 			nomessage.setText("�б�Ϊ�գ�����ֻ�û���κ�wifi����Ϣ");
-	 			Toast.makeText(this,"����豸��wifi��Ϣ",Toast.LENGTH_SHORT).show();
+	 			nomessage.setText("空");
+	 			Toast.makeText(this,"kong",Toast.LENGTH_SHORT).show();
 	 		}
 	 		else
 	 		{
@@ -137,7 +136,7 @@ public class SeeExistwifiActivity extends Activity {
         }
         else
         {
-        	System.out.println("û��");
+        	System.out.println("空");
         }
 	} catch (Exception e) {
 		e.printStackTrace();
