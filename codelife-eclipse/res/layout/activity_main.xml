@@ -33,5 +33,17 @@
         my:max="100"
         />
     
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <Button 
+            android:id="@+id/testwifiexist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="testwifiexist"/>
+        
+    </LinearLayout>
+    
 
 </RelativeLayout>

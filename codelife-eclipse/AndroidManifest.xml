@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>  
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>  
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+      <uses-permission android:name="android.permission.ACCESS_SURPERUSER"/>
+    
 
     <application
         android:allowBackup="true"
@@ -37,6 +39,12 @@
             android:name="com.godchin.codelife.testui.ProgressHUDDemo"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
+        
+          <activity
+            android:name="com.godchin.codelife.ui.wifi.SeeExistwifiActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        
         
             <receiver
             android:name="com.godchin.codelife.receiver.WiFiReceivers"

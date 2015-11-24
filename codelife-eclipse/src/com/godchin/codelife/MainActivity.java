@@ -1,11 +1,14 @@
 package com.godchin.codelife;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.godchin.codelife.receiver.WiFiReceivers;
 import com.godchin.codelife.receiver.WiFiReceivers.IWiFiStatusInterface;
+import com.godchin.codelife.ui.wifi.SeeExistwifiActivity;
 import com.godchin.codelife.view.RoundProgressBar;
 import com.godchin.codelife.view.TitleBar;
 import com.godchin.codelife.view.TitleBar.TitleBarClickListener;
@@ -34,6 +37,14 @@ public class MainActivity extends Activity implements TitleBarClickListener,
 
 	private void setListener() {
 		titleBar.setTopBarClickListener(this);
+		findViewById(R.id.testwifiexist).setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(MainActivity.this,SeeExistwifiActivity.class);
+			    startActivity(intent);
+			}
+		});
 	}
 
 	@Override
