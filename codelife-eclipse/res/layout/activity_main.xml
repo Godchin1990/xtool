@@ -1,11 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-     xmlns:my="http://schemas.android.com/apk/res/com.godchin.codelife"
+    xmlns:my="http://schemas.android.com/apk/res/com.godchin.codelife"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
     tools:context=".MainActivity" >
-    
+
     <com.godchin.codelife.view.TitleBar
         android:id="@+id/title_bar"
         android:layout_width="fill_parent"
@@ -17,33 +17,26 @@
         my:title_text="我的"
         my:title_text_color="#ffffff" >
     </com.godchin.codelife.view.TitleBar>
-    
-    <com.godchin.codelife.view.RoundProgressBar
-        android:id="@+id/round"
-        android:layout_centerInParent="true"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="10dp"
-        my:roundColor="#D1D1D1"
-        my:roundProgressColor="@android:color/darker_gray"
-        my:textColor="@android:color/black"
-        my:roundWidth="6dp"
-        my:textSize="15sp"
-        my:max="100"
-        />
-    
-    <LinearLayout android:layout_width="fill_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal">
-        <Button 
+        android:layout_below="@id/title_bar"
+        android:orientation="horizontal" >
+
+        <Button
             android:id="@+id/testwifiexist"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="testwifiexist"/>
-        
+            android:layout_weight="1"
+            android:text="wifi" />
+
+        <Button
+            android:id="@+id/animroundprocessdialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="progresss" />
     </LinearLayout>
-    
 
 </RelativeLayout>

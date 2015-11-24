@@ -7,13 +7,16 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
-       <!-- 以下是使用wifi访问网络所需的权限 -->  
-      <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>  
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>  
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>  
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
-      <uses-permission android:name="android.permission.ACCESS_SURPERUSER"/>
-    
+    <!-- 以下是使用wifi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_SURPERUSER" />
 
     <application
         android:allowBackup="true"
@@ -22,8 +25,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.godchin.codelife.MainActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,24 +37,26 @@
             android:name="com.godchin.codelife.testui.AnimRoundProcessDialog"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
-        
-          <activity
+        <activity
             android:name="com.godchin.codelife.testui.ProgressHUDDemo"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
-        
-          <activity
+        <activity
             android:name="com.godchin.codelife.ui.wifi.SeeExistwifiActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
-        
-            <activity
-            android:name="com.godchin.codelife.TextrxandroidActivity"
+        <activity
+            android:name="com.godchin.codelife.TextWifiListActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         
+         <activity
+            android:name="com.godchin.codelife.testui.TestProgressbarAndHandlerActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
         
-            <receiver
+
+        <receiver
             android:name="com.godchin.codelife.receiver.WiFiReceivers"
             android:exported="false" >
             <intent-filter>
