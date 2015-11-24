@@ -11,6 +11,9 @@
 	<classpathentry kind="lib" path="libs/support-annotations-21.0.0-rc1.jar"/>
 	<classpathentry kind="lib" path="libs/butterknife-5.1.0.jar"/>
 	<classpathentry kind="lib" path="libs/GifView.jar"/>
+	<classpathentry kind="lib" path="libs/rxjava-android-0.20.0.jar"/>
+	<classpathentry kind="lib" path="libs/rxjava-1.0.10.jar"/>
+	<classpathentry kind="lib" path="libs/rxjava-core-0.19.0.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>

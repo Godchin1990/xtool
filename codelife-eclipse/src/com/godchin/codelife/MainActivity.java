@@ -41,7 +41,8 @@ public class MainActivity extends Activity implements TitleBarClickListener,
 			
 			@Override
 			public void onClick(View arg0) {
-				Intent intent = new Intent(MainActivity.this,SeeExistwifiActivity.class);
+				//Intent intent = new Intent(MainActivity.this,SeeExistwifiActivity.class);
+				Intent intent = new Intent(MainActivity.this,TextrxandroidActivity.class);
 			    startActivity(intent);
 			}
 		});
