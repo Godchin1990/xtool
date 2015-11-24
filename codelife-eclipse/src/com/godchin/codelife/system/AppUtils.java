@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.UUID;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
@@ -14,6 +15,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
 //跟App相关的辅助类
@@ -171,16 +173,31 @@ public class AppUtils {
 	public static String doNullStr(String str) {
 		return TextUtils.isEmpty(str) ? "" : str;
 	}
+
+	public static String getLanguage(Context context) {
+		Locale locale = context.getResources().getConfiguration().locale;
+		String language = locale.getLanguage();
+		if (TextUtils.isEmpty(language) || language.length() < 2) {
+			language = "en";
+		} else {
+			language = language.substring(language.length() - 2);
+		}
+		return language.toLowerCase();
+	}
 	
-	 public static String getLanguage(Context context) {
-	        Locale locale = context.getResources().getConfiguration().locale;
-	        String language = locale.getLanguage();
-	        if (TextUtils.isEmpty(language) || language.length() < 2) {
-	            language = "en";
-	        } else {
-	            language = language.substring(language.length() - 2);
-	        }
-	        return language.toLowerCase();
-	    }
+	
+	 /**
+     * 获取机器唯一ID
+     *
+     * @return 唯一UUID
+     */
+    public static String getUid(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String tmDevice, androidId;
+        tmDevice = tm.getDeviceId();
+        androidId = android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+        UUID deviceUuid = new UUID(androidId.hashCode(), (long) tmDevice.hashCode());
+        return deviceUuid.toString();
+    }
 
 }
