@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.godchin.codelife.receiver.WiFiReceivers;
 import com.godchin.codelife.receiver.WiFiReceivers.IWiFiStatusInterface;
+import com.godchin.codelife.system.TestDevice;
 import com.godchin.codelife.testui.AnimRoundProcessDialog;
 import com.godchin.codelife.view.TitleBar;
 import com.godchin.codelife.view.TitleBar.TitleBarClickListener;
@@ -51,6 +52,17 @@ public class MainActivity extends Activity implements TitleBarClickListener,
 					public void onClick(View arg0) {
 						Intent intent = new Intent(MainActivity.this,
 								AnimRoundProcessDialog.class);
+						startActivity(intent);
+					}
+				});
+		
+		findViewById(R.id.testdevice).setOnClickListener(
+				new View.OnClickListener() {
+
+					@Override
+					public void onClick(View arg0) {
+						Intent intent = new Intent(MainActivity.this,
+								TestDevice.class);
 						startActivity(intent);
 					}
 				});

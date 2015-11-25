@@ -199,5 +199,83 @@ public class AppUtils {
         UUID deviceUuid = new UUID(androidId.hashCode(), (long) tmDevice.hashCode());
         return deviceUuid.toString();
     }
+    
+    void sim(Context context){
+    	StringBuffer siminfo = new StringBuffer();
+    	
+    	TelephonyManager tm = (TelephonyManager) context  
+                .getSystemService(Context.TELEPHONY_SERVICE);  
+        // SIM卡提供商代码 46000 46002移动  46001中国联通  46003电信  
+        String SimOperator = tm.getSimOperator();  
+        // Log.e("SIM卡提供商代码 ", SimOperator);  
+        siminfo.append("SIM卡提供商代码   " + SimOperator + "\n");  
+  
+        // SIM卡提供商名称  
+        String SimOperatorName = tm.getSimOperatorName();  
+        // Log.e("SIM卡提供商名称", SimOperatorName);  
+        siminfo.append("SIM卡提供商名称  " + SimOperatorName + "\n");  
+  
+        // SIM卡国别  
+        String SimCountryIso = tm.getSimCountryIso();  
+        // Log.e("SIM卡国别", SimCountryIso);  
+        siminfo.append("SIM卡国别 " + SimCountryIso + "\n");  
+  
+        // 返回设备唯一ID  
+        String deviceid = tm.getDeviceId();  
+        // Log.e("返回设备唯一ID", deviceid);GSM手机的IMEI和CDMA手机的MEID  
+        siminfo.append("返回设备唯一ID " + deviceid + "\n");  
+  
+        // 获得电话号码  
+        String tel = tm.getLine1Number();  
+        // Log.e("获得电话号码", tel);  
+        siminfo.append("获得电话号码 " + tel + "\n");  
+  
+        // SIM卡序列号  
+        String imei = tm.getSimSerialNumber();  
+        // Log.e("SIM卡序列号", imei);  
+        siminfo.append("SIM卡序列号 " + imei + "\n");  
+  
+        // 获取客户ID,在GSM中是imsi号  
+        String imsi = tm.getSubscriberId();  
+        // Log.e("获取客户ID,在GSM中是imsi号 ", imsi);  
+        siminfo.append("获取客户ID,在GSM中是imsi号 " + imsi + "\n");  
+  
+        // SIM卡状态  
+        int simState = tm.getSimState();  
+  
+        // SIM卡状态  
+        switch(simState) {  
+            case TelephonyManager.SIM_STATE_READY:  
+                // 良好  
+                // Log.e("", "良好");  
+                siminfo.append("SIM卡状态  良好    \n");  
+                break;  
+            case TelephonyManager.SIM_STATE_ABSENT:  
+                // 无SIM卡  
+                // Log.e("", "无SIM卡");  
+                siminfo.append("SIM卡状态  无SIM卡    \n");  
+                break;  
+            case TelephonyManager.SIM_STATE_NETWORK_LOCKED:  
+                // SIM卡网络被锁定，需要Network PIN解锁  
+                // Log.e("", "SIM卡网络被锁定，需要Network PIN解锁");  
+                siminfo.append("SIM卡状态  SIM卡网络被锁定，需要Network PIN解锁好    \n");  
+                break;  
+            case TelephonyManager.SIM_STATE_PIN_REQUIRED:  
+                // SIM卡PIN被锁定，需要User PIN解锁  
+                // Log.e("", "SIM卡PIN被锁定，需要User PIN解锁");  
+                siminfo.append("SIM卡状态  SIM卡PIN被锁定，需要User PIN解锁    \n");  
+                break;  
+            case TelephonyManager.SIM_STATE_PUK_REQUIRED:  
+                // SIM卡PUK被锁定，需要User PUK解锁  
+                // Log.e("", "SIM卡PUK被锁定，需要User PUK解锁");  
+                siminfo.append("SIM卡状态  SIM卡PUK被锁定，需要User PUK解锁    \n");  
+                break;  
+            case TelephonyManager.SIM_STATE_UNKNOWN:  
+                // SIM卡未知  
+                // Log.e("", "SIM卡未知");  
+                siminfo.append("SIM卡状态  SIM卡未知    \n");  
+                break;  
+        }  
+    }
 
 }
