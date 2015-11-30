@@ -1,6 +1,7 @@
 package com.godchin.codelife.view;
 
 
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -105,7 +106,13 @@ public class CanSeeEditText extends EditText{
 				if(distanceToDrawLeft >= (rightPadding - (passwordEye.getWidth()+rightOffset))){
 					//眼睛区域被点击了
 					if(getInputType() == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)){
-                		setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
+
+//						int inputType = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_AUTO_CORRECT
+//								| InputType.TYPE_TEXT_FLAG_MULTI_LINE | InputType.TYPE_TEXT_FLAG_AUTO_CORRECT
+//								| InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE;
+//						textView.setInputType(inputType);
+                		setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD|InputType.TYPE_CLASS_TEXT);
                 		setSelection(getText().length());
                 		passwordEye = passwordEyeVisible;
                 		invalidate();
