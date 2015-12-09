@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+	<RelativeLayout
+	    android:id="@+id/mytitle"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/title_height"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
+	    android:background="@color/title_background"
+	    android:gravity="center" >
+		    	    
+		<ImageView
+	       	android:id="@+id/back_btn"
+	       	android:layout_width="48dp"
+	       	android:layout_height="match_parent"
+	       	android:scaleType="centerInside"
+	       	android:layout_alignParentLeft="true"
+	       	android:src="@drawable/btn_back_pressed"
+	       	/>
+		    
+	    <ImageView
+	        android:id="@+id/setting_btn"
+	        android:layout_width="48dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:layout_alignParentRight="true"
+	        android:src="@drawable/ic_setting_btn"/>    
+	    
+		<TextView
+		    android:id="@+id/title"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_centerInParent="true"
+		    android:layout_toLeftOf="@id/setting_btn"
+		    android:layout_toRightOf="@id/back_btn"
+		    android:gravity="center"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp"
+		    android:singleLine="true"
+		    android:text="标题" />
+	</RelativeLayout>
+
+
+</RelativeLayout>

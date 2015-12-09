@@ -5,4 +5,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
      <dimen name="shake_x">4dp</dimen>
 
+        <dimen name="title_height">48dp</dimen>
+
 </resources>
