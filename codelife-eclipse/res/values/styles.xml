@@ -48,5 +48,20 @@
         <item name="android:windowIsFloating">true</item>
         <item name="android:background">#00000000</item>
     </style>
+    
+     <style name="SwipeBackLayout">
+        <item name="EdgeSize">20dip</item>
+        <item name="ShadowLeft">@drawable/shadow_left</item>
+        <item name="ShadowRight">@drawable/shadow_right</item>
+        <item name="ShadowBottom">@drawable/shadow_bottom</item>
+    </style>
+    
+    
+      <!-- 当Acitivity不需要标题时可以使用此Style -->
+    <style name="ActivityNoBar" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="title_font"></style>
 
 </resources>
