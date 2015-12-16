@@ -44,6 +44,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="testdevice" />
+         
+            
+         <Button
+            android:id="@+id/testswback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="testswback" />
     </LinearLayout>
 
 </RelativeLayout>

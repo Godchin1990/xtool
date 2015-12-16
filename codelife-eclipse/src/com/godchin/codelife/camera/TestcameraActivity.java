@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.godchin.codelife.R;
+import com.godchin.codelife.view.tool.SwipeBackActivity;
 
 
 
@@ -31,7 +32,7 @@ public class TestcameraActivity extends Activity implements CropHandler, View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.TestcameraActivity);
+        setContentView(R.layout.testcameraactivity);
         mCropParams = new CropParams(this);
         mImageView = (ImageView) findViewById(R.id.image);
         findViewById(R.id.bt_crop_capture).setOnClickListener(this);

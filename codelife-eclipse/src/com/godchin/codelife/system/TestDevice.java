@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.godchin.codelife.R;
+import com.godchin.codelife.view.tool.SwipeBackActivity;
 
 public class TestDevice extends Activity {  
     DevicePolicyManager devicePolicyManager;  

@@ -50,6 +50,7 @@ import com.godchin.codelife.testui.WifiConnDialog;
 import com.godchin.codelife.testui.WifiStatusDialog;
 import com.godchin.codelife.view.button.SlipButton;
 import com.godchin.codelife.view.button.SlipButton.OnChangedListener;
+import com.godchin.codelife.view.tool.SwipeBackActivity;
 import com.godchin.codelife.wifi.WifiAdmin;
 import com.joanzapata.android.listview.BaseAdapterHelper;
 import com.joanzapata.android.listview.QuickAdapter;
