@@ -13,7 +13,9 @@ import android.widget.TextView;
 
 @SuppressLint("NewApi")
 public class TitleBar extends RelativeLayout {
-	private TextView left_tv, right_tv, title_tv;
+	private TextView left_tv;
+	public TextView right_tv;
+	private TextView title_tv;
 	private View title_view;
 	private String title_text, left_text, right_text;
 	private int title_text_color, left_text_color, right_text_color;
