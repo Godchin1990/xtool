@@ -25,7 +25,6 @@ public class TitleBar extends RelativeLayout {
 
 	public TitleBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
-
 		TypedArray ta = context.obtainStyledAttributes(attrs,
 				R.styleable.title_bar);
 		title_text = ta.getString(R.styleable.title_bar_title_text);
